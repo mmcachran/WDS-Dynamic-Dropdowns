@@ -88,10 +88,10 @@ class WDSDD_Replace_Parent_Dropdown {
 	public function get_replacement_output() {
 		global $post;
 
-		// enqueue select 2
+		// Enqueue select 2.
 		$this->enqueue_scripts_and_styles();
 
-		// Do search w/ Ajax and populate these fields dynamically when a person starts typing
+		// Do search w/ Ajax and populate these fields dynamically when a person starts typing.
 		return '
 			<input type="text" name="parent_id" id="wds-page-search" value="'. ( isset( $post->post_parent ) ? $post->post_parent : '' ) .'"/>
 		';
@@ -129,7 +129,7 @@ class WDSDD_Replace_Parent_Dropdown {
 	 *
 	 * @since     1.0.0
 	 *
-	 * @return    null    outputs a JSON string to be consumed by an AJAX call
+	 * @return    null    Outputs a JSON string to be consumed by an AJAX call.
 	 */
 	public function ajax_get_pages() {
 		$security_check_passes = (
